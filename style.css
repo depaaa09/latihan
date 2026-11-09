@@ -1,0 +1,188 @@
+/* ===== 1. PENGATURAN DASAR ===== */
+body {
+  font-family: Verdana, Arial, sans-serif;
+  margin: 0;                 /* hapus jarak bawaan browser */
+  color: #263238;
+  scroll-behavior: smooth;   /* klik menu = scroll halus */
+}
+
+/* ===== 2. MENU ATAS ===== */
+.menu {
+  background-color: white;
+  display: flex;                    /* logo kiri, menu kanan */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;                 /* menu tetap menempel di atas */
+  top: 0;
+}
+
+.logo {
+  color: #2e7d32;
+  margin: 0;
+}
+
+.menu a {
+  color: #263238;
+  text-decoration: none;            /* hilangkan garis bawah link */
+  margin-left: 20px;
+}
+
+.menu a:hover {
+  color: #2e7d32;                   /* berubah warna saat disentuh mouse */
+}
+
+/* ===== 3. HERO (BAGIAN BESAR DI ATAS) ===== */
+.hero {
+  background: linear-gradient(135deg, #1b5e20, #66bb6a);  /* warna bertingkat */
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin: 0 0 10px;
+  animation: muncul 1.2s;           /* teks muncul perlahan */
+}
+
+/* Animasi sederhana: dari transparan naik ke tampil */
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tombol {
+  display: inline-block;
+  background-color: #ff9800;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;              /* sudut membulat */
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.tombol:hover {
+  background-color: #e65100;
+}
+
+/* ===== 4. BAGIAN UMUM ===== */
+.bagian {
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.hijau-muda {
+  background-color: #e8f5e9;
+}
+
+.judul {
+  color: #2e7d32;
+  font-size: 28px;
+  margin-top: 0;
+}
+
+/* Wadah kartu: berjajar ke samping, turun otomatis jika sempit */
+.daftar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ===== 5. KARTU PRODUK ===== */
+.kartu {
+  width: 200px;
+  background-color: white;
+  border: 2px solid #c8e6c9;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.kartu:hover {
+  transform: translateY(-8px);                    /* kartu naik sedikit */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);     /* muncul bayangan */
+  border-color: #2e7d32;
+}
+
+.ikon {
+  font-size: 60px;
+  background-color: #e8f5e9;
+  border-radius: 12px;
+  padding: 15px 0;
+}
+
+.kartu h3 {
+  color: #2e7d32;
+  margin-bottom: 5px;
+}
+
+.harga {
+  color: #ff9800;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1b5e20;
+}
+
+/* ===== 6. KEUNGGULAN ===== */
+.info {
+  width: 180px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ===== 7. TESTIMONI ===== */
+.testi {
+  width: 280px;
+  background-color: #fffde7;
+  border-left: 5px solid #ff9800;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: left;
+  font-style: italic;
+}
+
+/* ===== 8. FOOTER ===== */
+footer {
+  background-color: #1b5e20;
+  color: #c8e6c9;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+footer h3 {
+  margin: 0 0 5px;
+}
+
+/* ===== 9. TAMPILAN HP ===== */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;        /* menu turun ke bawah logo */
+  }
+  .hero h1 {
+    font-size: 26px;
+  }
+}
